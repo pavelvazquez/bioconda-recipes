@@ -20,27 +20,19 @@ build:
     - echo 'Installing immuneML...'
     - "{{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vvv || exit 1"
 
-  run_exports:
-    - {{ pin_subpackage('immuneml', max_pin="x") }}
-
 requirements:
   build:
-    - {{ compiler('c') }}
-    - python >=3.11,<3.12
+    - python 3.11
     - pip
     - cython
   host:
-    - python >=3.11,<3.12
+    - python 3.11
     - fisher
     - fishersapi
-    - stitchr
-    - imgtgenedl
   run:
-    - python >=3.11,<3.12
+    - python 3.11
     - fisher
     - fishersapi
-    - stitchr
-    - imgtgenedl
     - airr >=1,<1.6
     - dill >=0.3
     - editdistance >=0.6,<0.7
@@ -68,7 +60,7 @@ test:
   imports:
     - immuneML
   commands:
-    - immune-ml -h
+    - immune-ml --h
 
 
 about:
@@ -82,8 +74,4 @@ about:
 
 extra:
   skip-lints:
-    - cython_must_be_in_host
-  recipe-maintainers:
-    - knutwa-ext
-    - BlueBasilisk
-    - pavlovicmilena
+    - cython_must_be_in
