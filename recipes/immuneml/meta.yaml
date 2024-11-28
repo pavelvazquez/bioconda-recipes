@@ -27,15 +27,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-  host:
-    - pip
-    - python
-    - cython
-  run:
-requirements:
-  build:
     - python >=3.11,<3.12
     - pip
+    - cython
   host:
     - fisher
     - fishersapi
@@ -44,12 +38,12 @@ requirements:
   run:
     - python >=3.11,<3.12
     - fisher
+    - fishersapi
     - stitchr
     - imgtgenedl
     - airr >=1,<1.6
     - dill >=0.3
-    - editdistance >=0.6,<0.7  # Compatible with Python >=3.10,<3.12
-    - fishersapi
+    - editdistance >=0.6,<0.7
     - gensim >=3.8,<4
     - h5py >=2.9.0
     - logomaker >=0.8
@@ -59,16 +53,15 @@ requirements:
     - pandas >=1,<3
     - plotly >=4
     - pystache ==0.5.4
-    - pytest >=6,<8  # Compatible with Python >=3.10
+    - pytest >=6,<8
     - pytorch >=1.5.1
-    - python >=3.10,<3.12
     - pyyaml >=5.3
     - regex >=2024.9,<2025.0
-    - requests >=2.22,<2.33  # Compatible with urllib3 versions
+    - requests >=2.22,<2.33
     - scikit-learn >=0.23,<1.2
     - scipy >=1.5,<1.14
     - tensorboard >=1.14.0
-    - tqdm >=4.11,<5  # Compatible with Python >=3.10
+    - tqdm >=4.11,<5
     - tzlocal >=2,<4
 
 test:
