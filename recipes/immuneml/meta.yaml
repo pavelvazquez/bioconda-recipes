@@ -9,7 +9,6 @@ source:
   url: "https://pypi.io/packages/source/i/{{ name|lower }}/{{ name|lower }}-{{ version }}.tar.gz"
   sha256: e8bb82c987ebdc8960cae3c8441b495741916f7ad0ec59e9b0fd3d1c59711240
 
-
 build:
   number: 1
   entry_points:
@@ -31,6 +30,7 @@ requirements:
     - pip
     - cython
   host:
+    - python >=3.11,<3.12
     - fisher
     - fishersapi
     - stitchr
@@ -66,7 +66,9 @@ requirements:
 
 test:
   imports:
-    - immuneML  # Check if the immuneML module can be imported
+    - immuneML
+  commands:
+    - immune-ml -h
 
 
 about:
