@@ -22,15 +22,16 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - python >=3.8,<=3.11
     - pip
   host:
     - python >=3.8,<=3.11
-    - fisher >=0.1.5,<0.1.15
+    - fisher >=0.1.5,<0.1.14
     - fishersapi ==0.2
   run:
     - python >=3.8,<=3.11
-    - fisher >=0.1.5,<0.1.15
+    - fisher >=0.1.5,<0.1.14
     - fishersapi ==0.2
     - airr >=1,<1.6
     - dill >=0.3
@@ -54,6 +55,7 @@ requirements:
     - tensorboard >=1.14.0
     - tqdm >=4.11,<5
     - tzlocal >=2,<4
+
 
 
 test:
