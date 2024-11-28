@@ -16,7 +16,7 @@ build:
     - immune-ml-quickstart = immuneML.workflows.instructions.quickstart:main
   script:
     - echo 'Installing pip dependencies...'
-    - "{{ PYTHON }} -m pip install --no-cache-dir fisher fishersapi stitchr imgtgenedl || exit 1"
+    - "{{ PYTHON }} -m pip install --no-cache-dir fisher==0.1.14 fishersapi stitchr imgtgenedl || exit 1"
     - echo 'Installing immuneML...'
     - "{{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vvv || exit 1"
 
@@ -27,11 +27,8 @@ requirements:
     - pip
   host:
     - python >=3.8,<=3.11
-    - fisher >=0.1.5,<0.1.14
-    - fishersapi ==0.2
   run:
     - python >=3.8,<=3.11
-    - fisher >=0.1.5,<0.1.14
     - fishersapi ==0.2
     - airr >=1,<1.6
     - dill >=0.3
