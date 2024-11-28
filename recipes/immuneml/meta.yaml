@@ -22,15 +22,15 @@ build:
 
 requirements:
   build:
-    - python >=3.7,<3.12
+    - python >=3.9,<3.10
     - pip
   host:
-    - python >=3.7,<3.12
+    - python >=3.9,<3.10
     - fisher
     - fishersapi
   run:
-    - python >=3.7,<3.12
-    - fisher >=0.1.9,<0.1.15
+    - python >=3.9,<3.10
+    - fisher
     - fishersapi
     - airr >=1,<1.6
     - dill >=0.3
