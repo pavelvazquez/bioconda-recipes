@@ -26,12 +26,12 @@ requirements:
     - pip
   host:
     - python >=3.8,<=3.11
-    - fisher
-    - fishersapi
+    - fisher >=0.1.5,<0.1.15
+    - fishersapi ==0.2
   run:
     - python >=3.8,<=3.11
-    - fisher >=0.1.5,<0.1.14
-    - fishersapi >=0.1.0,<0.2.0
+    - fisher >=0.1.5,<0.1.15
+    - fishersapi ==0.2
     - airr >=1,<1.6
     - dill >=0.3
     - editdistance >=0.6,<0.7
@@ -54,6 +54,7 @@ requirements:
     - tensorboard >=1.14.0
     - tqdm >=4.11,<5
     - tzlocal >=2,<4
+
 
 test:
   imports:
