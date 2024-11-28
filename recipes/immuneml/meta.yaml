@@ -25,6 +25,8 @@ requirements:
     - {{ compiler('c') }}
     - python >=3.8,<=3.11
     - pip
+    - gcc
+    - make
   host:
     - python >=3.8,<=3.11
   run:
