@@ -30,8 +30,8 @@ requirements:
     - fishersapi
   run:
     - python >=3.9,<3.10
-    - fisher
-    - fishersapi
+    - fisher >=0.1.5,<0.1.14
+    - fishersapi >=0.1.0,<0.2.0
     - airr >=1,<1.6
     - dill >=0.3
     - editdistance >=0.6,<0.7
