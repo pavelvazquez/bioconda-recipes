@@ -32,7 +32,7 @@ requirements:
     - python >=3.8,<=3.11
   run:
     - python >=3.8,<=3.11
-    - fishersapi == 0.2
+    - fishersapi ==0.2
     - fisher >=0.1.19
     - airr >=1,<1.6
     - dill >=0.3
