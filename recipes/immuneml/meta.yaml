@@ -33,7 +33,6 @@ requirements:
     - cython
   run:
 requirements:
-requirements:
   build:
     - python >=3.11,<3.12
     - pip
