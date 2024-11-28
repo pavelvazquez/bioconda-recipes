@@ -22,16 +22,15 @@ build:
 
 requirements:
   build:
-    - python 3.11
+    - python >=3.7,<3.12
     - pip
-    - cython
   host:
-    - python 3.11
+    - python >=3.7,<3.12
     - fisher
     - fishersapi
   run:
-    - python 3.11
-    - fisher
+    - python >=3.7,<3.12
+    - fisher >=0.1.9,<0.1.15
     - fishersapi
     - airr >=1,<1.6
     - dill >=0.3
