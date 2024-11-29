@@ -23,13 +23,11 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - python >=3.8,<=3.9
-    - pip
   host:
-    - python >=3.8,<=3.9
+    - python
     - cython
   run:
-    - python >=3.8,<=3.9
+    - python
     - fishersapi
     - airr >=1,<1.6
     - dill >=0.3
