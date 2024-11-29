@@ -11,12 +11,11 @@ source:
 
 build:
   number: 1
+  skip: true  # [py2k or py <= 36 or py > 39]
   entry_points:
     - immune-ml = immuneML.app.ImmuneMLApp:main
     - immune-ml-quickstart = immuneML.workflows.instructions.quickstart:main
   script: |
-    echo 'Installing pip dependencies...'
-    $PYTHON -m pip install --no-cache-dir stitchr imgtgenedl || exit 1
     echo 'Installing immuneML...'
     $PYTHON -m pip install . --no-deps --no-build-isolation -vvv || exit 1
     echo 'Done installing immuneML'
@@ -24,16 +23,14 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - python >=3.8,<=3.11
+    - python >=3.8,<=3.9
     - pip
-    - gcc
-    - make
   host:
-    - python >=3.8,<=3.11
+    - python >=3.8,<=3.9
+    - cython
   run:
-    - python >=3.8,<=3.11
-    - fishersapi ==0.2
-    - fisher >=0.1.19
+    - python >=3.8,<=3.9
+    - fishersapi
     - airr >=1,<1.6
     - dill >=0.3
     - editdistance >=0.6,<0.7
@@ -56,6 +53,7 @@ requirements:
     - tensorboard >=1.14.0
     - tqdm >=4.11,<5
     - tzlocal >=2,<4
+    - cython
 
 test:
   imports:
